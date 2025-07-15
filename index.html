@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Content Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>WordPress Content Editor</h1>
+    <div><p>Use the WSIWYG editor to add HTML tags to your content.</p></div>
+    <div class="main-container">
+        <div class="editor-column">
+            <div class="editor-section">
+                <h2 class="section-title">Editor</h2>
+                
+                <div class="toolbar">
+                    <button data-tag="h2">H2</button>
+                    <button data-tag="h3">H3</button>
+                    <button data-tag="p">P</button>
+                    <button data-tag="p" data-class="lead-paragraph">P (lead)</button>
+                    <button data-tag="ul" data-class="bullets">UL</button>
+                    <button data-tag="ol" data-class="bullets">OL</button>
+                    <button data-tag="i" data-class="bullets"><i>i</i></button>
+                    <button data-tag="li">List Item</button>
+                    <button data-tag="a" data-attributes='{"href":"#","title":""}'>Link</button>
+                    <button data-tag="b">Bold</button>
+                    <button data-tag="img" data-attributes='{"src":"https://haistage.wpenginepowered.com/wp-content/uploads/placeholder.png","alt":"","class":"alignnone size-full"}'>Image</button>
+                </div>
+                
+                <textarea id="editor" placeholder="Type your content here or use the buttons above to insert formatted elements..."></textarea>
+            </div>
+            
+            <div class="output-section">
+                <h2 class="section-title">HTML Output</h2>
+                <textarea id="html-output" readonly></textarea>
+                <button class="copy-btn" id="copy-html">Copy HTML to Clipboard</button>
+                
+                <div class="notice">
+                    <p>After copying the HTML, paste it into the WordPress editor in "Text" mode (not "Visual" mode).</p>
+                </div>
+            </div>
+        </div>
+        <div class="preview-column">
+            <h2 class="section-title">Live Preview</h2>
+            <div id="preview"></div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
